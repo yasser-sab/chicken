@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chicken</title>
+
+	<style type="text/css">
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.wrapper {
+			position: relative;
+			width: 9.375em;
+			height: 6.25em;
+			/*background-color: blue;*/
+		}
+
+		.head {
+			font-size: .8em;
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			height: 2.5em;
+			width: 2.5em;
+			background-color: green;
+			border-top-right-radius:100%;
+		}
+
+		.eye {
+			position: absolute;
+			width: .625em;
+			height: .625em;
+			left: 30%;
+			top: 50%;
+			background-color: red;
+			border-radius: 50%;
+			transform:translate(-50%,-50%);
+
+		}
+
+		.eye::after {
+			content: "";
+			position: absolute;
+			width: 50%;
+			height: 50%;
+			background-color: black;
+			border-radius: 50%;
+			left: 10%;
+			top: 70%;
+			transform:translate(-50%,-50%);
+			animation: a 1s linear infinite;
+		}
+
+		.mn9ar {
+			position: absolute;
+			right: 100%;
+			bottom: 0;
+			border:.625em solid transparent;
+			border-right-color: orange;
+
+		}
+
+		.chachia {
+			position: absolute;
+			top:0;
+			left: 0;
+			height: 8px;
+			width: 4px;
+			background-color: orange;
+			border-top-left-radius:100%;
+			border-top-right-radius:100%;
+			transform-origin: left bottom;
+			transform: translate(100%,-50%) rotate(-10deg);
+		}
+
+		.chachia::before {
+			content: "";
+			position: absolute;
+			bottom:0;
+			right: 100%;
+			width: 100%;
+			height: 150%;
+			border-top-left-radius:100%;
+			border-top-right-radius:100%;
+			background-color: orange;
+		}
+
+		.chachia::after {
+			content: "";
+			position: absolute;
+			bottom:0;
+			left: 100%;
+			width: 100%;
+			height: 50%;
+			border-top-left-radius:100%;
+			border-top-right-radius:100%;
+			background-color: orange;
+		}
+
+		.body {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 60%;
+			width: 80%;
+			background-color: red;
+			border-bottom-right-radius:100px;
+			border-bottom-left-radius:100px;
+		}
+
+		.tail {
+			position: absolute;
+			bottom: 100%;
+			right: 0;
+			width: 1em;
+			height: 1em;
+			background-color: blue;
+			border-top-left-radius:100%;
+		}
+
+		.jnah {
+			position: relative;
+			width: 50%;
+			height: 50%;
+			left: 0%;
+			top: 50%;
+/*			background-color: pink;
+*/			border-radius: 100% 0%;
+			transform:scale(-1,1) translate(-50%,-50%);
+			border:.00625em solid transparent;
+			border-bottom-color: silver;
+			border-left-color: silver;
+		}
+
+		.legs {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 2em;
+			height: 1em;
+			/*background-color: yellow;*/
+			transform:translate(-50%,-15%);
+		}
+
+		.legs > div:first-child {
+			position: absolute;
+			height: 100%;
+			width: .25em;
+			top: 0;
+			left: 0;
+			background-color: green;
+		}
+
+		.legs > div:first-child::before {
+			content: "";
+			position: absolute;
+			height: .25em;
+			width: .25em;
+			background-color: green;
+			right: 100%;
+			bottom: 0;
+		}
+
+		.legs > div:first-child::after {
+			content: "";
+			position: absolute;
+			height: .25em;
+			width: .125em;
+			background-color: green;
+			left: 100%;
+			bottom: 0;
+			border-top-right-radius: 50%;
+			border-bottom-right-radius: 50%;
+		}
+
+		.legs > div:last-child {
+			position: absolute;
+			height: 100%;
+			width: .25em;
+			top: 0;
+			right: 0;
+			background-color: green;
+		}
+
+		.legs > div:last-child::before {
+			content: "";
+			position: absolute;
+			height: .25em;
+			width: .25em;
+			background-color: green;
+			right: 100%;
+			bottom: 0;
+		}
+
+		.legs > div:last-child::after {
+			content: "";
+			position: absolute;
+			height: .25em;
+			width: .125em;
+			background-color: green;
+			left: 100%;
+			bottom: 0;
+			border-top-right-radius: 100%;
+			border-bottom-right-radius: 100%;
+		}
+
+		@keyframes a {
+			to {
+				transform:translate(0%,0%);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="head">
+			<div class="eye"></div>
+			<div class="mn9ar"></div>
+			<div class="chachia"></div>
+		</div>
+		<div class="body">
+			<div class="tail"></div>
+			<div class="jnah"></div>
+			<div class="legs">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
